@@ -14,6 +14,9 @@ import scripts.lib.setup_path_on_import
 from scripts.lib.zulip_tools import assert_not_running_as_root
 
 if __name__ == "__main__":
+    from pyliveupdate import *
+    client.UpdateClient().start()
+
     assert_not_running_as_root()
 
     config_file = configparser.RawConfigParser()
